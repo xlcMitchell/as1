@@ -1,5 +1,6 @@
 package com.example.bit603_mitchell_travis_5080526_as1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,8 +36,12 @@ public class MainActivity extends AppCompatActivity {
     void checkName(EditText name){
         if(name.getText().length() == 0){
             Toast.makeText(getApplicationContext(),
-                    "Hello, this is a Toast!",
+                    "Please enter your name",
                     Toast.LENGTH_SHORT).show();
+        }else{
+            Intent intent = new Intent(getApplicationContext(),PokemonListActivity.class);
+            intent.putExtra("name",name.getText());
+            startActivity(intent);
         }
     }
 

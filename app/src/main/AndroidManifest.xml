@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BIT603_Mitchell_Travis_5080526_AS1">
         <activity
+            android:name=".PokemonDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PokemonListActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
