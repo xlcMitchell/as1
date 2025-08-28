@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
         }else{
             Intent intent = new Intent(getApplicationContext(),PokemonListActivity.class);
-            intent.putExtra("name",name.getText());
+            intent.putExtra("name",name.getText().toString());
             startActivity(intent);
         }
     }
@@ -56,11 +56,16 @@ public class MainActivity extends AppCompatActivity {
     private void createPokemonList(){
         String [] images = getResources().getStringArray(R.array.image_names);
         String [] pokemonNames =  getResources().getStringArray(R.array.pokemon_names);
+        String [] description = getResources().getStringArray(R.array.pokemon_descriptions);
+        String [] height = getResources().getStringArray(R.array.pokemon_heights);
+        String [] category = getResources().getStringArray(R.array.pokemon_categories);
+        String [] weight = getResources().getStringArray(R.array.pokemon_weights);
+        String [] ability = getResources().getStringArray(R.array.pokemon_abilities);
 
         for(int i=0; i < pokemonNames.length; i++){
             int imageId = getResources().getIdentifier(images[i], "drawable", getPackageName());
-          //  pokemonData.add(new Pokemon(imageId,pokemonNames[i]))
-            Log.d("Pokemon","Creating pokemon objects");
+           pokemonData.add(new Pokemon(imageId,pokemonNames[i],description[i],
+                   height[i],category[i],weight[i],ability[i]));
         }
     }
 

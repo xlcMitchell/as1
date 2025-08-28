@@ -26,7 +26,7 @@ public class PokemonListActivity extends AppCompatActivity {
         TextView welcomeMsg = findViewById(R.id.welcomeTxt);
         //receive intent to display welcome message
         Intent intent = getIntent();
-        String usersName = "Welcome " + intent.getStringExtra(Intent.EXTRA_TEXT) + "\nLet us explore";
+        String usersName = "Welcome " + intent.getStringExtra("name") + "\nLet us explore";
         welcomeMsg.setText(usersName);
         //Create recycler view adapter and set it maybe??
     }
