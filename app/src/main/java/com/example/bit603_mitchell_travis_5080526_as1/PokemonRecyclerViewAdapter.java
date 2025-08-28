@@ -9,6 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+/*
+The recycler view adapter class connects our data list to the recycler view
+ */
+
 public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonViewHolder>{
 
     List <Pokemon> data;
