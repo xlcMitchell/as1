@@ -2,6 +2,7 @@ package com.example.bit603_mitchell_travis_5080526_as1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         EditText name = findViewById(R.id.nameEntry);
         pokemonData = new ArrayList<>();
 
+        //---- btn onclick listener ----
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,19 +43,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //Method checks if the user has entered a name
     void checkName(EditText name){
         if(name.getText().length() == 0){
             Toast.makeText(getApplicationContext(),
                     "Please enter your name",
                     Toast.LENGTH_SHORT).show();
-        }else{
+        }else{ //if a name has been entered an intent is created to send name + pokemon data to next activity
             Intent intent = new Intent(getApplicationContext(),PokemonListActivity.class);
             intent.putExtra("name",name.getText().toString());
+            intent.putExtra("pokemon_list", (Serializable) pokemonData);
             startActivity(intent);
         }
     }
 
-    //TODO finish method to create Pokemon objects
+    //Method which create the pokemon objects and add them to the list array
     private void createPokemonList(){
         String [] images = getResources().getStringArray(R.array.image_names);
         String [] pokemonNames =  getResources().getStringArray(R.array.pokemon_names);

@@ -10,6 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PokemonListActivity extends AppCompatActivity {
@@ -28,6 +29,8 @@ public class PokemonListActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String usersName = "Welcome " + intent.getStringExtra("name") + "\nLet us explore";
         welcomeMsg.setText(usersName);
+         //receive pokemon list
+        ArrayList <Pokemon> pokemonData = (ArrayList<Pokemon>) intent.getSerializableExtra("pokemon_list");
         //Create recycler view adapter and set it maybe??
     }
 }

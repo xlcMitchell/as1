@@ -9,7 +9,9 @@ of each pokemon.This demonstrates the OOP principle of instantiation and reduces
  */
 
 
-public class Pokemon {
+import java.io.Serializable;
+
+public class Pokemon implements Serializable {
     private int imageResourceID;
     private String name;
     private String description;
