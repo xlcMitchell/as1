@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn = findViewById(R.id.btn);
         EditText name = findViewById(R.id.nameEntry);
         pokemonData = new ArrayList<>();
-
+        createPokemonList();
         //---- btn onclick listener ----
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Method which create the pokemon objects and add them to the list array
+
     private void createPokemonList(){
         String [] images = getResources().getStringArray(R.array.image_names);
         String [] pokemonNames =  getResources().getStringArray(R.array.pokemon_names);
@@ -67,11 +68,16 @@ public class MainActivity extends AppCompatActivity {
         String [] weight = getResources().getStringArray(R.array.pokemon_weights);
         String [] ability = getResources().getStringArray(R.array.pokemon_abilities);
 
+
         for(int i=0; i < pokemonNames.length; i++){
-            int imageId = getResources().getIdentifier(images[i], "drawable", getPackageName());
+          int imageId = getResources().getIdentifier(images[i], "drawable", getPackageName());
+            Log.d("Pokemon", "Got resource id: " + imageId);
            pokemonData.add(new Pokemon(imageId,pokemonNames[i],description[i],
                    height[i],category[i],weight[i],ability[i]));
+
+
         }
+
     }
 
 }

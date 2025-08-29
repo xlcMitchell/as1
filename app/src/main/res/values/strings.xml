@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BIT603_Mitchell_Travis_5080526_AS1</string>
+    <string name="app_name">Pokemon App</string>
     <string name="pokemon_explorer">Pokemon Explorer</string>
     <string name="enter_your_name">Enter your name</string>
     <string name="let_us_explore">Let Us Explore!</string>
@@ -19,32 +19,36 @@
         <item>Caterpie</item>
     </string-array>
 
-    <!-- DESCRIPTIONS -->
+    <!--DESCRIPTIONS-->
+    <!--All apostrophes had to be escaped for the project to compile-->
+
+
     <string-array name="pokemon_descriptions">
-        <item>Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun&apos;s rays, the seed grows progressively larger.</item>
-        <item>There is a bud on this Pokémon&apos;s back. To support its weight, Ivysaur&apos;s legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it&apos;s a sign that the bud will bloom into a large flower soon.</item>
-        <item>There is a large flower on Venusaur&apos;s back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower&apos;s aroma soothes the emotions of people.</item>
-        <item>The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.</item>
-        <item>Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.</item>
-        <item>Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.</item>
-        <item>Squirtle&apos;s shell is not merely used for protection. The shell&apos;s rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.</item>
-        <item>Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon&apos;s toughness as a battler.</item>
-        <item>Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.</item>
+        <item>Bulbasaur can be seen napping in bright sunlight. There is a seed on it\'s back. By soaking up the suns rays, the seed grows progressively larger55a</item>
+        <item>There is a bud on this Pokémons back. To support its weight, Ivysaur\'s legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, its a sign that the bud will bloom into a large flower soon.</item>
+        <item>There is a large flower on Venusaur\'s back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower\'s aroma soothes the emotions of people.</item>
+        <item>The flame that burns at the tip of it\'s tail is an indication of it\'s emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely</item>
+        <item>Charmeleon mercilessly destroys it\'s foes using it\'s sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of it\'s tail flares with a bluish white color.</item>
+        <item>Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns it\'s fiery breath on any opponent weaker than itself</item>
+        <item>Squirtles shell is not merely used for protection. The shell\'s rounded shape and the grooves on it\'s surface help minimize resistance in water, enabling this Pokémon to swim at high speeds</item>
+        <item>It\'s tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémons toughness as a battler.</item>
+        <item>Blastoise has water spouts that protrude from it\'s shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.</item>
         <item>Perhaps because it would like to grow up quickly, it has a voracious appetite, eating a hundred leaves a day.</item>
     </string-array>
 
-    <!-- HEIGHTS -->
+
+    <!-- HEIGHTS Tested ok-->
     <string-array name="pokemon_heights">
-        <item>2&apos; 04&quot;</item>
-        <item>3&apos; 03&quot;</item>
-        <item>6&apos; 07&quot;</item>
-        <item>2&apos; 00&quot;</item>
-        <item>3&apos; 07&quot;</item>
-        <item>5&apos; 07&quot;</item>
-        <item>1&apos; 08&quot;</item>
-        <item>3&apos; 03&quot;</item>
-        <item>5&apos; 03&quot;</item>
-        <item>1&apos; 00&quot;</item>
+        <item><![CDATA[2\'4"]]></item>
+        <item><![CDATA[3\'3"]]></item>
+        <item><![CDATA[6\'7"]]></item>
+        <item><![CDATA[2\'0"]]></item>
+        <item><![CDATA[3\'7"]]></item>
+        <item><![CDATA[5\'7"]]></item>
+        <item><![CDATA[1\'8"]]></item>
+        <item><![CDATA[3\'3"]]></item>
+        <item><![CDATA[5\'3"]]></item>
+        <item><![CDATA[1\'0"]]></item>
     </string-array>
 
     <!-- CATEGORIES -->
@@ -88,9 +92,10 @@
         <item>Torrent</item>
         <item>Shield Dust</item>
     </string-array>
-    <!--IMAGE NAMES-->
+
+    <!-- IMAGE NAMES -->
     <string-array name="image_names">
-        <item>bulbasur</item>
+        <item>bulbasaur</item>
         <item>ivysaur</item>
         <item>venusaur</item>
         <item>charmander</item>
