@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -22,9 +23,9 @@ public class PokemonListActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_pokemon_list);
 
-
         TextView welcomeMsg = findViewById(R.id.welcomeTxt);
         RecyclerView recyclerView = findViewById(R.id.pokemonRecyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //receive intent to display welcome message
         Intent intent = getIntent();
         String usersName = "Welcome " + intent.getStringExtra("name") + "\nLet us explore";
@@ -35,6 +36,8 @@ public class PokemonListActivity extends AppCompatActivity {
         //Create recycler view adapter and set it maybe??
         PokemonRecyclerViewAdapter recyclerViewAdapter = new PokemonRecyclerViewAdapter(pokemonData);
         recyclerView.setAdapter(recyclerViewAdapter);
+
+
 
     }
 }
