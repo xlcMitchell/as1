@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -24,13 +27,35 @@ public class PokemonDetailActivity extends AppCompatActivity {
         Pokemon pokemon = (Pokemon) intent.getSerializableExtra("pokemon_object");
         assert pokemon != null;
 
-
+        //Retrieving ids
         TextView heading = findViewById(R.id.heading);
         ImageView img = findViewById(R.id.pokemonImg);
+        RadioGroup radioOptions = findViewById(R.id.myRadioGroup);
+        TextView txt = findViewById(R.id.txtUpdate);
+        RadioButton heightBtn = findViewById(R.id.heightRadioButton);
 
+
+        heightBtn.setChecked(true); //set height option checked by default
         img.setImageResource(pokemon.getImageResourceID()); //set pokemon image
         heading.setText(pokemon.getName()); //set the heading to the pokemon's name
 
+        radioOptions.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(@NonNull RadioGroup group, int checkedId) {
+                      if(checkedId == R.id.heightRadioButton){
+                          txt.setText(pokemon.getHeight());
+                      }else if(checkedId == R.id.weightRadioButton){
+                          txt.setText(pokemon.getWeight());
+                      }else if(checkedId == R.id.abilityRadioButton){
+                          txt.setText(pokemon.getAbility());
+                      }else if(checkedId == R.id.categoryRadioButton){
+                          txt.setText(pokemon.getCategory());
+                      }
+            }
+        });
+
 
     }
+
+
 }
