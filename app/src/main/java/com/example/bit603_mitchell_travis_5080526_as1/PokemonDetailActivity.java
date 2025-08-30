@@ -3,6 +3,8 @@ package com.example.bit603_mitchell_travis_5080526_as1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -33,28 +35,51 @@ public class PokemonDetailActivity extends AppCompatActivity {
         RadioGroup radioOptions = findViewById(R.id.myRadioGroup);
         TextView txt = findViewById(R.id.txtUpdate);
         RadioButton heightBtn = findViewById(R.id.heightRadioButton);
+        Button exploreBtn = findViewById(R.id.exploreBtn);
 
 
         heightBtn.setChecked(true); //set height option checked by default
         img.setImageResource(pokemon.getImageResourceID()); //set pokemon image
         heading.setText(pokemon.getName()); //set the heading to the pokemon's name
+        updateRadioGroup(heightBtn.getId(),pokemon,txt);
 
         radioOptions.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(@NonNull RadioGroup group, int checkedId) {
-                      if(checkedId == R.id.heightRadioButton){
-                          txt.setText(pokemon.getHeight());
-                      }else if(checkedId == R.id.weightRadioButton){
-                          txt.setText(pokemon.getWeight());
-                      }else if(checkedId == R.id.abilityRadioButton){
-                          txt.setText(pokemon.getAbility());
-                      }else if(checkedId == R.id.categoryRadioButton){
-                          txt.setText(pokemon.getCategory());
-                      }
+                     updateRadioGroup(checkedId,pokemon,txt);
+            }
+        });
+
+        exploreBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //  Intent intent = new Intent(getApplicationContext(),PokemonListActivity.class);
+              //  startActivity(intent);
+                finish();
             }
         });
 
 
+
+
+
+
+
+
+
+
+    }
+
+    private void updateRadioGroup(int checkedId, Pokemon pokemon, TextView txt){
+        if(checkedId == R.id.heightRadioButton){
+            txt.setText(pokemon.getHeight());
+        }else if(checkedId == R.id.weightRadioButton){
+            txt.setText(pokemon.getWeight());
+        }else if(checkedId == R.id.abilityRadioButton){
+            txt.setText(pokemon.getAbility());
+        }else if(checkedId == R.id.categoryRadioButton){
+            txt.setText(pokemon.getCategory());
+        }
     }
 
 
