@@ -17,6 +17,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/*
+This activity will display the information about each individual pokemon
+when the user selected a pokemon from the list activity
+ */
 public class PokemonDetailActivity extends AppCompatActivity {
 
     @Override
@@ -53,9 +57,7 @@ public class PokemonDetailActivity extends AppCompatActivity {
         exploreBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  Intent intent = new Intent(getApplicationContext(),PokemonListActivity.class);
-              //  startActivity(intent);
-                finish();
+                finish(); //close the current activity and return to previous (recycler view list)
             }
         });
 

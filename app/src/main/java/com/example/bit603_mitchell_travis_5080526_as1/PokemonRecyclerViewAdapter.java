@@ -16,7 +16,15 @@ import java.util.List;
 
 /*
 The recycler view adapter class connects our data list to the recycler view
-It implements
+It implements several different methods to achieve this.
+
+The onCreateViewHolder creates a new PokemonViewHolder by inflating a
+pokemon card view
+
+The onBindViewHolder sets an onclick listener to each view holder
+
+Inheritance - Our PokemonRecyclerViewAdapter inherits properties from the
+RecyclerViewAdapter class reducing redundancy be reusing code
  */
 
 public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonViewHolder>{
@@ -36,13 +44,13 @@ public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonView
 
     @Override
     public void onBindViewHolder(@NonNull PokemonViewHolder holder, int position) {
-               Pokemon pokemon = data.get(position);
+               Pokemon pokemon = data.get(position); //get the pokemon object
                holder.name.setText(pokemon.getName());
 
                //Attach a click listener to each pokemon cardview
                holder.itemView.setOnClickListener(v -> {
                    Intent intent = new Intent(v.getContext(),PokemonDetailActivity.class);
-                   intent.putExtra("pokemon_object",(Serializable) pokemon);
+                   intent.putExtra("pokemon_object",(Serializable) pokemon); //pass the pokemon object that was selected
                    v.getContext().startActivity(intent);
                });
     }
