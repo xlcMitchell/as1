@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    app:cardBackgroundColor="#CDDC8C"
+    app:cardBackgroundColor="@color/myColor"
     app:cardCornerRadius="20dp"
     app:cardElevation="8dp">
 
@@ -31,7 +31,7 @@
             android:text="Pokemon Name"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#E91E63"
+            android:textColor="@color/white"
             android:layout_marginLeft="20dp"
             app:layout_constraintLeft_toRightOf="@id/pokemonImage"
             app:layout_constraintTop_toTopOf="@id/pokemonImage"

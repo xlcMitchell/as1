@@ -29,7 +29,7 @@
                 android:id="@+id/heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
+                android:padding="30dp"
                 android:textStyle="bold"
                 android:text="@string/pokemon_explorer"
                 android:textSize="24sp"
@@ -41,7 +41,7 @@
                 android:layout_height="4dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:background="@color/design_default_color_secondary" />
+                android:background="@color/myColor" />
 
             <ImageView
                 android:id="@+id/pokemonImg"
@@ -105,6 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Explore More"
+        android:background="@color/myColor"
         android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

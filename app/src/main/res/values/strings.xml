@@ -37,18 +37,19 @@
     </string-array>
 
 
-    <!-- HEIGHTS Tested ok-->
+    <!-- HEIGHTS Tested ok foot character had to be escaped to compile, inch character
+    had to be escaped to display on the app but would still compile-->
     <string-array name="pokemon_heights">
-        <item><![CDATA[2\'4"]]></item>
-        <item><![CDATA[3\'3"]]></item>
-        <item><![CDATA[6\'7"]]></item>
-        <item><![CDATA[2\'0"]]></item>
-        <item><![CDATA[3\'7"]]></item>
-        <item><![CDATA[5\'7"]]></item>
-        <item><![CDATA[1\'8"]]></item>
-        <item><![CDATA[3\'3"]]></item>
-        <item><![CDATA[5\'3"]]></item>
-        <item><![CDATA[1\'0"]]></item>
+        <item>2\'4\"</item>
+        <item>3\'3\"</item>
+        <item>6\'7\"</item>
+        <item>2\'0\"</item>
+        <item>3\'7\"</item>
+        <item>5\'7\"</item>
+        <item>1\'8\"</item>
+        <item>3\'3\"</item>
+        <item>5\'3\"</item>
+        <item>1\'0\"</item>
     </string-array>
 
     <!-- CATEGORIES -->
@@ -67,16 +68,16 @@
 
     <!-- WEIGHTS -->
     <string-array name="pokemon_weights">
-        <item>15.20</item>
-        <item>28.70</item>
-        <item>220.50</item>
-        <item>18.70</item>
-        <item>41.90</item>
-        <item>199.50</item>
-        <item>19.80</item>
-        <item>49.60</item>
-        <item>188.50</item>
-        <item>6.40</item>
+        <item>15.20 lbs</item>
+        <item>28.70 lbs</item>
+        <item>220.50 lbs</item>
+        <item>18.70 lbs</item>
+        <item>41.90 lbs</item>
+        <item>199.50 lbs</item>
+        <item>19.80 lbs</item>
+        <item>49.60 lbs</item>
+        <item>188.50 lbs</item>
+        <item>6.40 lbs</item>
     </string-array>
 
     <!-- ABILITIES -->
