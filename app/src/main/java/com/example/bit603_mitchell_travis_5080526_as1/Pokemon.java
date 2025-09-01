@@ -4,8 +4,9 @@ package com.example.bit603_mitchell_travis_5080526_as1;
 The pokemon class is created because we will be creating many different pokemon
 objects in our application. The class acts as a blue print for creating pokemon
 objects and saves us from repeating code. Instead we can just create a new pokemon
-object for each pokemon with different parameters representing the distinct characteristics
-of each pokemon.This demonstrates the OOP principle of instantiation and reduces code duplication.
+object for each pokemon with different parameters representing the distinct characteristics.
+Polymorphism - being able to create many different pokemon objects with different characteristics
+Encapsulation -Pokemon data is separate from other parts of the app
  */
 
 

@@ -19,7 +19,13 @@ import androidx.core.view.WindowInsetsCompat;
 
 /*
 This activity will display the information about each individual pokemon
-when the user selected a pokemon from the list activity
+when the user selected a pokemon from the list activity.. The pokemon that the
+user selects will be passed through to this activity with an intent
+
+**INHERITANCE** -- Like the other activity classes we inherit methods from the AppCompatActivity
+**ABSTRACTION** -- We also hide complexity using the AppCompatActivity class
+**POLYMORPHISM** -- The inherited classes can be implemented to in many different ways
+
  */
 public class PokemonDetailActivity extends AppCompatActivity {
 

@@ -17,14 +17,16 @@ import java.util.List;
 /*
 The recycler view adapter class connects our data list to the recycler view
 It implements several different methods to achieve this.
-
 The onCreateViewHolder creates a new PokemonViewHolder by inflating a
 pokemon card view
-
 The onBindViewHolder sets an onclick listener to each view holder
 
-Inheritance - Our PokemonRecyclerViewAdapter inherits properties from the
+**INHERITANCE** -- Our PokemonRecyclerViewAdapter inherits properties from the
 RecyclerViewAdapter class reducing redundancy be reusing code
+**POLYMORPHISM** -- The recycler view will be able to be created in many different forms reusing
+the same code
+**ABSTRACTION** -- More complex parts of the RecyclerViewAdapter are hidden and we focus on
+implementing the code necessary for our recyclerview to function
  */
 
 public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonViewHolder>{

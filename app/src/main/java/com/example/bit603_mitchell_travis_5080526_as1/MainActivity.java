@@ -19,6 +19,17 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+The main activity will be the first activity that the user views
+when the use the application..The activity will collect the user's name
+and also creates the pokemon List Array.. When the user goes to the next
+activity this data will be passed through an Intent object
+
+**ABSTRACTION** -- Utilising the AppCompatActivity class hides code complexity
+**INHERITANCE** -- We can implement methods from the AppCompatActivity class limiting new code
+**ENCAPSULATION** -- The pokemon data is separated from other classes and only shared when necessary
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     public static List<Pokemon> pokemonData;

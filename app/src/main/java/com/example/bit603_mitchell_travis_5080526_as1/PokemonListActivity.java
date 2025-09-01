@@ -4,6 +4,10 @@ package com.example.bit603_mitchell_travis_5080526_as1;
 The PokemonListActivity class will be used to display the recycler
 view which will show all of the different pokemon's to the user.
 
+**INHERITANCE** -- PokemonListActivity extends AppCompatActivity allowing
+us to use code from this class rather than creating our own methods
+**ABSTRACTION** -- More complex functionality is hidden as we are utilising the AppCompatActivity class
+
  */
 
 import android.content.Intent;
